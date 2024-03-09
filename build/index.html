@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="Css/output.css" />
+  <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="./Css/style.css" />
+  <title>Music Player</title>
+</head>
+
+<body class="max-h-screen h-screen w-screen bg-black overflow-hidden">
+
+  <div id="playing-song-container" class="w-screen h-screen bg-white hidden"
+    style="position:absolute; z-index: 300;top: 0;">
+
+    <section class="tittle-section relative flex flex-col items-center justify-around"
+      style="width: 100vw;height: 15%;">
+      <h1 class="text-center text-slate-800 text-3xl capitalize">this is the song tittle</h1>
+      <button
+        class="px-3 py-1 rounded-md text-white capitalize animate-pulse bg-red-600 cursor-pointer hover:animate-none focus:bg-red-700"
+        style="position: absolute; top: 80%;" onclick="stopSong(this)">⏺️stop</button>
+    </section>
+
+    <section class="thumbnail-section flex items-center justify-center flex-col" style="width: 100vw;height: 60%;">
+      <div class="image-container w-72 h-72 bg-black rounded-full shadow-md shadow-black"
+        style="background-image: url('./images/bg.jpg');background-position: center; background-repeat: no-repeat;background-size: cover;">
+      </div>
+      <div class="songCount mt-3 capitalize text-2xl" id="song-index-count">
+        1/10
+      </div>
+    </section>
+
+    <section class="controls-section">
+      <div style="width: 100vw; height: 20%; position: fixed; bottom: 0; display: block; z-index: 1000;"
+        class="bg-slate-800 pt-5 flex items-center justify-around flex-col">
+        <div class="duration-bar w-screen text-center">
+          <input type="range" name="range" id="song-duration" min="0" max="100" value="0" style="width: 80vw" />
+        </div>
+        <div class="paly-pause-controls w-screen flex items-center justify-center pt-5">
+          <div class="previous hover:scale-105" id="previous-btn">
+            <img src="./images/backward-solid.svg" alt="previos-song-icon" width="30px" class="mx-5 cursor-pointer" />
+          </div>
+          <div class="play-pause pausebtn" id="playPause-btn">
+            <img src="./images/circle-pause-solid.svg" alt="play-pause-icon" width="40px" class="mx-5 cursor-pointer" />
+          </div>
+          <div class="next hover:scale-105" id="next-btn">
+            <img src="./images/forward-solid.svg" alt="next-song-icon" width="30px" class="mx-5 cursor-pointer" />
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <header class="fixed top-0">
+    <nav style="height: 10vh" class="w-screen bg-slate-800">
+      <div style="height: 100%" class="logo flex items-center p-5">
+        <img src="./images/logo.png" alt="logo" class="w-12 m-2" />
+        <span class="m-3 text-white text-2xl">Music Player</span>
+      </div>
+    </nav>
+  </header>
+
+  <main style="height: 100vh; margin-top: 8vh; overflow: auto;" class="text-white flex items-start justify-center">
+    <div class="songsContainer sm:w-1/2 w-screen p-10">
+
+      <!-- <div class="songItem bg-white text-black rounded-xl my-2 m-auto p-2 flex items-center justify-between w-full"
+        style="height: 80px;">
+        <div class="image">
+          <img src="./images/covers/1.jpg" width="50px" style="border-radius: 50%" />
+        </div>
+        <div class="tittle">this is the song tittle</div>
+        <div class="controls flex items-center justify-between">
+          <div class="play-icon">
+            <img src="images/circle-play-solid-white.svg" width="35px" class="cursor-pointer" />
+          </div>
+          <span class="duration ml-3">05:03</span>
+        </div>
+      </div> -->
+
+    </div>
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
