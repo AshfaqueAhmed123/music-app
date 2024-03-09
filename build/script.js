@@ -68,13 +68,13 @@ let songs = [
     song: new Audio('./songs/dhoom3song.mp4'),
     tittle:"dhoom 3 song",
     songImg:"images.jpeg",
-    id:9,
+    id:10,
   },
   {
     song: new Audio('./songs/10.mp3'),
     tittle:"this is thenth song",
     songImg:"10.jpg",
-    id:10,
+    id:11,
   },
 ];
 
